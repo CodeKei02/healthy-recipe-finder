@@ -4,7 +4,7 @@ import imagePattern from "../../../../public/pattern-squiggle-1.svg";
 
 export const Header = () => {
   return (
-    <div className="h-[70vh] max-h-[800px] min-h-[500px] flex flex-col lg:justify-center m-auto lg:text-center">
+    <div className="h-full mt-10 flex flex-col md:justify-center m-auto md:text-center">
       <div className="w-[95%] pl-3 m-auto mb-0">
         <h1 className="font-bold text-[3rem] text-[var(--neutral-900)] mb-3 leading-[1.1]">
           <span className="relative">
@@ -13,26 +13,31 @@ export const Header = () => {
           </span>{" "}
           meals, zero fuss
         </h1>
-        <p className="text-[1.125rem] text-space-[0.5px] text-[var(--neutral-900)] mb-2 md:max-w-[450px] lg:max-w-[600px]">
+        <p className="text-[1.125rem] text-space-[0.5px] text-[var(--neutral-900)] mb-2 md:max-w-[450px] lg:max-w-[600px] m-auto">
           Discover eight quick, whole-food recipes that you can cook tonight—no
           processed junk, no guesswork.
         </p>
         <button className="btn w-[200px]">Start exploring</button>
       </div>
-      <img
-        src={imageLarge.src}
-        alt="Healthy meals, zero fuss"
-        className="w-[95%] min-w-[600px] lg:max-w-[900px] m-auto border border-white border-[5px] rounded-lg mt-4 relative hidden md:block"
-      />
-      <img
-        src={imageSmall.src}
-        alt="Healthy meals, zero fuss"
-        className="min-w-[200px] m-auto mx-3 border border-white border-[5px] rounded-lg mt-4 relative md:hidden"
-      />
-      <img
-        src={imagePattern.src}
-        className="w-full h-full absolute right-0 z-[-1] bottom-[-200px] md:bottom-[-30px] lg:bottom-[-10px] "
-      />
+      <div className="relative mt-4">
+        <div className="w-[95%] md:m-auto">
+          <img
+            src={imageLarge.src}
+            alt="Healthy meals, zero fuss"
+            className="border border-white border-[5px] rounded-lg mt-4 hidden md:block"
+          />
+          <img
+            src={imageSmall.src}
+            alt="Healthy meals, zero fuss"
+            className="w-full mx-3 border border-white border-[5px] rounded-lg mt-4 md:hidden"
+          />
+        </div>
+
+        <img
+          src={imagePattern.src}
+          className="w-full h-full absolute right-0 z-[-1] top-0"
+        />
+      </div>
     </div>
   );
 };
