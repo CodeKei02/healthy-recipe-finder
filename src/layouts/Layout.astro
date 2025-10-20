@@ -1,4 +1,6 @@
 ---
+import { Navbar } from '../components/react/NavBar'
+import { Footer } from '../components/react/Footer'
 import '../styles/global.css'
 ---
 
@@ -10,7 +12,9 @@ import '../styles/global.css'
 		<title>Healthy Recipe Finder</title>
 	</head>
 	<body>
+		<Navbar client:load/>
 		<slot />
+		<Footer client:load/>
 	</body>
 </html>
 
