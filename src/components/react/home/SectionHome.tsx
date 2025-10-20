@@ -6,8 +6,7 @@ export const SectionHome = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Define el rango de scroll para cada sección
-      const sectionHeight = 400; // Puedes ajustar este valor
+      const sectionHeight = 400;
       const index = Math.floor(window.scrollY / sectionHeight);
       setActiveIndex(index);
     };
