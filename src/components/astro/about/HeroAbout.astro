@@ -1,0 +1,22 @@
+---
+import { Hero } from "../../react/Hero";
+import imageSmall from "../../../assets/images/image-about-our-mission-small.webp";
+import imageLarge from "../../../assets/images/image-about-our-mission-large.webp";
+---
+
+<>
+    <Hero
+    title="Help more people cook nourishing meals, more often."
+    imgLarge={imageLarge.src}
+    imgSmall={imageSmall.src}
+    span="Our mission"
+    client:load
+    >Healthy Recipe Finder was created to prove that healthy 
+    eating can be convenient, affordable, and genuinely delicious. 
+    <br/> <br />
+    We showcase quick, whole-food dishes that anyone can master—no 
+    fancy equipment, no ultra-processed shortcuts—just honest 
+    ingredients and straightforward steps. 
+    </Hero>
+    <hr class="opacity-15"/>
+</>

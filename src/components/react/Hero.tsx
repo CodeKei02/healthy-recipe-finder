@@ -32,7 +32,7 @@ export const Hero = ({
       <img
         src={imgLarge}
         alt="real-life"
-        className="hidden md:block rounded-lg lg:max-w-[900px] lg:min-w-[600px]"
+        className="hidden md:block rounded-lg lg:max-w-[700px]"
       />
     </div>
   );

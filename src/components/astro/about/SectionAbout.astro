@@ -1,0 +1,20 @@
+---
+import { Hero } from "../../react/Hero";
+import imageSmall from "../../../assets/images/image-about-beyond-the-plate-small.webp";
+import imageLarge from "../../../assets/images/image-about-beyond-the-plate-large.webp";
+---
+
+<Hero
+    title="Beyond the plate"
+    imgLarge={imageLarge.src}
+    imgSmall={imageSmall.src}
+>We believe food is a catalyst for community and well-being. 
+  By sharing approachable recipes, we hope to:
+  <br />
+  <ol class="text-[var(--neutral-600)] list-disc list-inside mt-4">
+    <li>Encourage family dinners and social cooking.</li>
+    <li>Reduce reliance on single-use packaging and delivery waste.</li>
+    <li>Spark curiosity about seasonal produce and local agriculture.</li>
+  </ol>
+</Hero>
+

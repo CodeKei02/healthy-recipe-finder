@@ -1,0 +1,12 @@
+---
+import HeroAbout from "../components/astro/about/HeroAbout.astro";
+import Layout from "../layouts/Layout.astro";
+import ItemsAbout from "../components/astro/about/ItemsAbout.astro";
+import SectionAbout from "../components/astro/about/SectionAbout.astro";
+---
+
+<Layout>
+    <HeroAbout client:load />
+    <ItemsAbout />
+    <SectionAbout client:load />
+</Layout>
