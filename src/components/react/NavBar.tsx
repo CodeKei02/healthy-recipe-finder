@@ -43,7 +43,9 @@ export const Navbar = () => {
                 </a>
               ))}
             </div>
-            <button className="hidden md:block ml-4 btn">Browse Recipes</button>
+            <a href="/recipes" className="hidden md:block ml-4 btn text-none">
+              Browse Recipes
+            </a>
           </div>
         </div>
       </div>
