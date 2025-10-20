@@ -1,26 +1,23 @@
 ---
 import imageSmall from "../../../assets/images/image-home-real-life-small.webp";
 import imageLarge from "../../../assets/images/image-home-real-life-large.webp";
+import { Hero } from "../../react/Hero";
 ---
 
-
-<div class="w-[90%] m-auto mt-20 mb-20 lg:flex lg:items-center ">
-   <div class="lg:w-1/2 pr-10 mb-5">
-      <h1 class="text-[2rem] font-extrabold mb-5 text-[var(--neutral-900)]">Built for real time</h1>
-      <p class="text-[var(--neutral-600)]">
-        Cooking shouldn't be complicated. These recipes come in under
-         <span class="relative">
-            30 minutes
-            <span class="absolute opacity-50 z-[-1] bg-[var(--orange-500)] bottom-0 left-0 w-20 h-[10px]"></span>
-          </span>
-        of active time, fit busy schedules, and taste good enough to repeat.
-        <br /> <br />
-        Whether you're new to the kitchen or just need fresh ideas, we've got
-        you covered.
-      </p>  
-   </div>
+<Hero
+  title="Built for real time"
+  imgLarge={imageLarge.src} 
+  imgSmall={imageSmall.src}
+  client:load
   
-    <img src={imageSmall.src} alt="real-life" class="md:hidden rounded-lg" />
-    <img src={imageLarge.src} alt="real-life" class="hidden md:block rounded-lg lg:max-w-[900px] lg:min-w-[600px]" />
-</div>
-
+>
+  Cooking shouldn't be complicated. These recipes come in under
+    <span class="relative">
+      30 minutes
+    <span class="absolute opacity-50 z-[-1] bg-[var(--orange-500)] bottom-0 left-0 w-20 h-[10px]"></span>
+    </span>
+      of active time, fit busy schedules, and taste good enough to repeat.
+      <br /> <br />
+      Whether you're new to the kitchen or just need fresh ideas, we've got
+      you covered.
+</Hero>

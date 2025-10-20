@@ -20,7 +20,9 @@ export const Footer = () => {
           <p className="px-2 text-[var(--neutral-600)] my-4 max-w-[500px]">
             Hit the button, pick a recipe, and get dinner on the table-fast!
           </p>
-          <button className="btn">Browse Recipes</button>
+          <a href="/recipes" className="btn text-none">
+            Browse Recipes
+          </a>
         </div>
 
         <img
