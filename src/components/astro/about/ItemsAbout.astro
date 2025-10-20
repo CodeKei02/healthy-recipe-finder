@@ -1,0 +1,8 @@
+---
+import { ItemsList } from "../../react/about/ItemsList";
+import whyWeExistDescription from "../../../constants/about/why-we-exist"
+import ourFoodPhilosophyDescription from "../../../constants/about/our-food-philosophy"
+---
+<ItemsList items={whyWeExistDescription} title="Why we exist" client:load />
+<hr class="opacity-20"/> 
+<ItemsList items={ourFoodPhilosophyDescription} title="Our food philosophy" client:load />
