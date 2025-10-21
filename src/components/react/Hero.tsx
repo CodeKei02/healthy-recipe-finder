@@ -27,13 +27,14 @@ export const Hero = ({
         </h1>
         <p className="text-[var(--neutral-600)]">{children}</p>
       </div>
-
-      <img src={imgSmall} alt="real-life" className="md:hidden rounded-lg" />
-      <img
-        src={imgLarge}
-        alt="real-life"
-        className="hidden md:block rounded-lg lg:max-w-[700px]"
-      />
+      <div className="lg:w-1/2 flex justify-center">
+        <img src={imgSmall} alt="real-life" className="md:hidden rounded-lg" />
+        <img
+          src={imgLarge}
+          alt="real-life"
+          className="hidden md:block rounded-lg lg:min-w-[300px]"
+        />
+      </div>
     </div>
   );
 };
