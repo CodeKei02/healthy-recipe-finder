@@ -1,9 +1,9 @@
 import { motion } from "motion/react";
-import arrow from "../../../../public/icon-bullet-point.svg";
+import arrow from "../../../public/icon-bullet-point.svg";
 
 interface ItemsListProps {
   items: { title: string; description: string }[];
-  title: string;
+  title?: string;
 }
 
 export const ItemsList = ({ items, title }: ItemsListProps) => {
