@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+import RecipeHeader from "../components/astro/recipes/RecipeHeader.astro";
+import { RecipeCard } from "../components/react/recipes/RecipeCard.tsx";
+import data from "../../data.json"
+---
+
+<Layout>
+  <RecipeHeader />
+  <RecipeCard items={data} client:load />
+  
+</Layout>
