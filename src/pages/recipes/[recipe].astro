@@ -1,0 +1,36 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import data from "../../../data.json";
+import { CardGrid } from "../../components/react/CardGrid";
+
+export function getStaticPaths() {
+  return data.map((recipe) => ({
+    params: { recipe: recipe.title.replace(/\s+/g, "-").toLowerCase() },
+  }));
+}
+
+const { recipe  } = Astro.params;
+
+const recipeData = data.find(
+  (r) => r.title.replace(/\s+/g, "-").toLowerCase() === recipe
+);
+---
+
+<Layout>
+    <div class="w-[90%] m-auto mt-10 flex items-center text-sm text-[var(--neutral-600)]">
+        <a href="/recipes" class="mr-1">Recipes</a>/<span class="ml-1 font-medium text-[var(--neutral-900)]">{recipeData?.title}</span>
+    </div>
+     
+    
+    <CardGrid 
+        id={recipeData?.id}
+        title={recipeData?.title!}
+        image={recipeData?.image!}
+        overview={recipeData?.overview}
+        prepMinutes={recipeData?.prepMinutes}
+        cookMinutes={recipeData?.cookMinutes}
+        category={recipeData?.category}
+        className="bg-transparent"
+        client:load
+    />
+</Layout>
