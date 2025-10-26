@@ -5,8 +5,8 @@
     "slug": "mediterranean-chickpea-salad",
     "category": "Lunch",
     "image": {
-      "large": "src/assets/images/mediterranean-chickpea-salad-large.webp",
-      "small": "src/assets/images/mediterranean-chickpea-salad-small.webp"
+      "large": "/images/mediterranean-chickpea-salad-large.webp",
+      "small": "/images/mediterranean-chickpea-salad-small.webp"
     },
     "overview": "A refreshing, protein-packed salad tossed in a lemon-olive oil dressing.",
     "prepMinutes": 10,
@@ -43,8 +43,8 @@
     "slug": "avocado-tomato-wholegrain-toast",
     "category": "Breakfast",
     "image": {
-      "large": "src/assets/images/avocado-tomato-wholegrain-toast-large.webp",
-      "small": "src/assets/images/avocado-tomato-wholegrain-toast-small.webp"
+      "large": "/images/avocado-tomato-wholegrain-toast-large.webp",
+      "small": "/images/avocado-tomato-wholegrain-toast-small.webp"
     },
     "overview": "Creamy avocado spread over toasted wholegrain bread, topped with juicy tomatoes.",
     "prepMinutes": 5,
@@ -74,8 +74,8 @@
     "slug": "one-pan-lemon-garlic-salmon-with-asparagus",
     "category": "Lunch",
     "image": {
-      "large": "src/assets/images/salmon-asparagus-large.webp",
-      "small": "src/assets/images/salmon-asparagus-small.webp"
+      "large": "/images/salmon-asparagus-large.webp",
+      "small": "/images/salmon-asparagus-small.webp"
     },
     "overview": "A 15-minute weeknight dinner of flaky salmon and tender asparagus.",
     "prepMinutes": 5,
@@ -102,8 +102,8 @@
     "slug": "quinoa-veggie-power-bowl",
     "category": "Lunch",
     "image": {
-      "large": "src/assets/images/quinoa-veggie-bowl-large.webp",
-      "small": "src/assets/images/quinoa-veggie-bowl-small.webp"
+      "large": "/images/quinoa-veggie-bowl-large.webp",
+      "small": "/images/quinoa-veggie-bowl-small.webp"
     },
     "overview": "A balanced bowl of fluffy quinoa, roasted veggies and healthy fats.",
     "prepMinutes": 5,
@@ -140,8 +140,8 @@
     "slug": "sweet-potato-black-bean-tacos",
     "category": "Lunch",
     "image": {
-      "large": "src/assets/images/sweet-potato-tacos-large.webp",
-      "small": "src/assets/images/sweet-potato-tacos-small.webp"
+      "large": "/images/sweet-potato-tacos-large.webp",
+      "small": "/images/sweet-potato-tacos-small.webp"
     },
     "overview": "Smoky roasted sweet potatoes and black beans tucked into warm tortillas.",
     "prepMinutes": 5,
@@ -182,8 +182,8 @@
     "slug": "greek-yogurt-berry-parfait",
     "category": "Snack",
     "image": {
-      "large": "src/assets/images/greek-yogurt-large.webp",
-      "small": "src/assets/images/greek-yogurt-small.webp"
+      "large": "/images/greek-yogurt-large.webp",
+      "small": "/images/greek-yogurt-small.webp"
     },
     "overview": "Layers of creamy yogurt, fresh berries and crunchy oats for a high-protein snack.",
     "prepMinutes": 5,
@@ -207,8 +207,8 @@
     "slug": "lentil-spinach-soup",
     "category": "Dinner",
     "image": {
-      "large": "src/assets/images/lentil-soup-large.webp",
-      "small": "src/assets/images/lentil-soup-small.webp"
+      "large": "/images/lentil-soup-large.webp",
+      "small": "/images/lentil-soup-small.webp"
     },
     "overview": "A hearty 30-minute soup rich in plant protein and iron.",
     "prepMinutes": 5,
@@ -240,8 +240,8 @@
     "slug": "banana-oat-pancakes",
     "category": "Breakfast",
     "image": {
-      "large": "src/assets/images/banana-pancakes-large.webp",
-      "small": "src/assets/images/banana-pancakes-small.webp"
+      "large": "/images/banana-pancakes-large.webp",
+      "small": "/images/banana-pancakes-small.webp"
     },
     "overview": "Flour-free pancakes sweetened naturally with ripe bananas.",
     "prepMinutes": 5,
