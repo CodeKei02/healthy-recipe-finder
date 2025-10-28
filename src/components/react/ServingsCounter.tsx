@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import useRecipeStore from "../../stores/useRecipeStore";
 
 export interface ServingsCounterProps {
-  value?: number; // controlled value
-  defaultValue?: number; // uncontrolled initial value
+  value?: number;
+  defaultValue?: number;
   onChange?: (value: number) => void;
   min?: number;
   max?: number;
@@ -11,13 +11,6 @@ export interface ServingsCounterProps {
   className?: string;
   "aria-label"?: string;
 }
-
-/**
- * ServingsCounter
- * - Supports controlled (pass `value`) and uncontrolled (pass `defaultValue`) modes.
- * - Enforces min/max and step.
- * - Accessible buttons and number input.
- */
 const ServingsCounter: React.FC<ServingsCounterProps> = ({
   value,
   defaultValue = 1,
@@ -32,14 +25,11 @@ const ServingsCounter: React.FC<ServingsCounterProps> = ({
   const storeServings = useRecipeStore((s) => s.servings);
   const setStoreServings = useRecipeStore((s) => s.setServings);
 
-  // If uncontrolled, use the global store value.
-  // Initialize store to defaultValue on mount if it differs.
   useEffect(() => {
     if (!isControlled) {
       const target = Math.max(min, Math.floor(defaultValue));
       if (storeServings !== target) setStoreServings(target);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const current = isControlled ? (value as number) : storeServings;
