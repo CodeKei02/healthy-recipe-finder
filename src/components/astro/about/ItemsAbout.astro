@@ -3,6 +3,6 @@ import { ItemsList } from "../../react/ItemsList";
 import whyWeExistDescription from "../../../constants/about/why-we-exist"
 import ourFoodPhilosophyDescription from "../../../constants/about/our-food-philosophy"
 ---
-<ItemsList items={whyWeExistDescription} title="Why we exist" client:load />
+<ItemsList items={whyWeExistDescription} title="Why we exist" className="w-[90%] lg:grid-cols-2  lg:justify-center" classTitle="text-[2rem] lg:text-[3rem]" client:load />
 <hr class="opacity-20"/> 
-<ItemsList items={ourFoodPhilosophyDescription} title="Our food philosophy" client:load />
+<ItemsList items={ourFoodPhilosophyDescription} title="Our food philosophy" className="w-[90%] lg:grid-cols-2  lg:justify-center" classTitle="text-[2rem] lg:text-[3rem]" client:load />
