@@ -93,6 +93,7 @@ export const RecipeCard = ({ items }: RecipeCardProps) => {
             cookMinutes={item.cookMinutes}
             category={item.category}
             button={true}
+            titleStyle="text-[1.25rem] leading-[26px] tracking-[-0.5px] whitespace-nowrap overflow-hidden text-ellipsis"
           />
         ))}
       </motion.div>

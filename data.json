@@ -26,7 +26,7 @@
       { "ingredient": "fresh lemon juice", "amount": 1, "unit": "Tbsp" },
       {
         "ingredient": "Sea salt & black pepper to taste",
-        "amount": null,
+        "amount": 0,
         "unit": null
       }
     ],
@@ -57,7 +57,7 @@
       { "ingredient": "fresh lemon juice", "amount": 1, "unit": "tsp" },
       {
         "ingredient": "Sea salt, black pepper, pinch chili flakes",
-        "amount": null,
+        "amount": 0,
         "unit": null
       }
     ],
@@ -86,7 +86,7 @@
       { "ingredient": "extra-virgin olive oil", "amount": 1, "unit": "Tbsp" },
       { "ingredient": "garlic cloves, minced", "amount": 2, "unit": "" },
       { "ingredient": "lemon, sliced", "amount": 0.5, "unit": "" },
-      { "ingredient": "Sea salt & black pepper", "amount": null, "unit": null }
+      { "ingredient": "Sea salt & black pepper", "amount": 0, "unit": null }
     ],
     "instructions": [
       "Heat a large skillet over medium-high with olive oil.",
@@ -165,7 +165,7 @@
       { "ingredient": "shredded red cabbage", "amount": 0.5, "unit": "cup" },
       {
         "ingredient": "Fresh cilantro & salsa to serve",
-        "amount": null,
+        "amount": 0,
         "unit": null
       }
     ],
@@ -252,8 +252,8 @@
       { "ingredient": "eggs", "amount": 2, "unit": "" },
       { "ingredient": "baking powder", "amount": 1, "unit": "tsp" },
       { "ingredient": "cinnamon", "amount": 0.5, "unit": "tsp" },
-      { "ingredient": "Olive oil for cooking", "amount": null, "unit": null },
-      { "ingredient": "Fresh fruit to serve", "amount": null, "unit": null }
+      { "ingredient": "Olive oil for cooking", "amount": 0, "unit": null },
+      { "ingredient": "Fresh fruit to serve", "amount": 0, "unit": null }
     ],
     "instructions": [
       "Blend bananas, oats, eggs, baking powder and cinnamon until smooth.",

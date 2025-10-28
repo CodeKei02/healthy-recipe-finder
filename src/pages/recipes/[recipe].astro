@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import data from "../../../data.json";
 import { CardGrid } from "../../components/react/CardGrid";
-
+import { ItemsList } from "../../components/react/ItemsList";
 export function getStaticPaths() {
   return data.map((recipe) => ({
     params: { recipe: recipe.title.replace(/\s+/g, "-").toLowerCase() },
@@ -17,12 +17,15 @@ const recipeData = data.find(
 ---
 
 <Layout>
-    <div class="w-[90%] m-auto mt-10 flex items-center text-sm text-[var(--neutral-600)]">
-        <a href="/recipes" class="mr-1">Recipes</a>/<span class="ml-1 font-medium text-[var(--neutral-900)]">{recipeData?.title}</span>
-    </div>
-     
-    
-    <CardGrid 
+    <div class="w-[90%] m-auto mt-10 items-center text-sm text-[var(--neutral-600)]">
+      
+      <div class="flex mb-4 ml-2">
+        <a href="/recipes" class="mr-1 flex">
+          Recipes
+        </a>/
+        <span class="ml-1 font-medium text-[var(--neutral-900)]">{recipeData?.title}</span>
+      </div>
+      <CardGrid
         id={recipeData?.id}
         title={recipeData?.title!}
         image={recipeData?.image!}
@@ -30,7 +33,18 @@ const recipeData = data.find(
         prepMinutes={recipeData?.prepMinutes}
         cookMinutes={recipeData?.cookMinutes}
         category={recipeData?.category}
-        className="bg-transparent"
+        className=" bg-transparent p-0 gap-x-0 md:max-w-none lg:flex-row"
+        imageStyle="  lg:rounded-lg"
+        titleStyle="text-[2.5rem] leading-[2.5rem] lg:leading-[3rem] tracking-[-0.5px] mb-4"
+        itemsIngredient={recipeData?.ingredients}
+        itemsInstruction={recipeData?.instructions}
+        recipe={true}
         client:load
     />
+
+     <ItemsList itemsIngredient={recipeData?.ingredients} title="Ingredients" client:load className="w-[90%] lg:hidden" classTitle="text-[1rem]" />
+     <ItemsList itemsInstruction={recipeData?.instructions} title="Instructions" client:load className="w-[90%] lg:hidden" classTitle="text-[1rem]"/>
+
+  </div>
+
 </Layout>
