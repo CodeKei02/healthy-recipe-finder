@@ -3,6 +3,9 @@ import Layout from "../../layouts/Layout.astro";
 import data from "../../../data.json";
 import { CardGrid } from "../../components/react/CardGrid";
 import { ItemsList } from "../../components/react/ItemsList";
+import { MoreRecipes } from "../../components/react/recipes/MoreRecipes";
+import type { MoreRecipesProps } from "../../components/react/recipes/MoreRecipes";
+
 export function getStaticPaths() {
   return data.map((recipe) => ({
     params: { recipe: recipe.title.replace(/\s+/g, "-").toLowerCase() },
@@ -14,6 +17,23 @@ const { recipe  } = Astro.params;
 const recipeData = data.find(
   (r) => r.title.replace(/\s+/g, "-").toLowerCase() === recipe
 );
+
+const filterRecipes = data.filter((r) => r.id !== recipeData?.id);
+
+
+const sampleUnique = (arr: MoreRecipesProps[], count: number) => {
+  const copy = arr.slice();
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const tmp = copy[i];
+    copy[i] = copy[j];
+    copy[j] = tmp;
+  }
+  return copy.slice(0, Math.min(count, copy.length));
+};
+
+const moreRecipes = sampleUnique(filterRecipes, 3);
+
 ---
 
 <Layout>
@@ -44,7 +64,11 @@ const recipeData = data.find(
 
      <ItemsList itemsIngredient={recipeData?.ingredients} title="Ingredients" client:load className="w-[90%] lg:hidden" classTitle="text-[1rem]" />
      <ItemsList itemsInstruction={recipeData?.instructions} title="Instructions" client:load className="w-[90%] lg:hidden" classTitle="text-[1rem]"/>
-
+      <hr class="opacity-20"/>
+      <div class="mt-5 md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <MoreRecipes items={moreRecipes.slice(0, 3)} client:load/>
+      </div>
+      
   </div>
 
 </Layout>
