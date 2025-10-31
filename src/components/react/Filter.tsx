@@ -11,7 +11,8 @@ interface FiltersProps {
   name?: string;
 }
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import useClickOutside from "../../hooks/useClickOutside";
 
 const Filter: React.FC<FiltersProps> = ({
   options,
@@ -21,6 +22,10 @@ const Filter: React.FC<FiltersProps> = ({
   name,
 }) => {
   const [open, setOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  // close when clicking outside the dropdown
+  useClickOutside(containerRef, () => setOpen(false), { enabled: open });
 
   const handleToggle = (value: string) => {
     if (selected.includes(value)) {
@@ -36,7 +41,7 @@ const Filter: React.FC<FiltersProps> = ({
 
   const handleOpen = () => setOpen((prev) => !prev);
   return (
-    <div className={`relative ${className} w-1/3`}>
+    <div ref={containerRef} className={`relative ${className} w-1/3`}>
       <button
         type="button"
         onClick={handleOpen}
